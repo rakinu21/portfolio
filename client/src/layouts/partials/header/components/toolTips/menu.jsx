@@ -38,7 +38,7 @@ const Menu = ({ onClose }) => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            <Link to={item === "Home" ? "/" : `/${item}`} onClick={onClose}>{item}</Link> {/* Close menu on click */}
+            <Link to={item === "home" ? "/" : `/${item}`} onClick={onClose}>{item}</Link> {/* Close menu on click */}
           </motion.li>
         ))}
       </ul>
