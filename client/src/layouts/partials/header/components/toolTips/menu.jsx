@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import "./menu.scss";
 
 const variants = {
@@ -9,7 +10,7 @@ const variants = {
 };
 
 const Menu = ({ onClose }) => {
-  const [dataLink] = useState(["Home", "Project", "Contact","Services"]);
+  const [dataLink] = useState(["home", "project", "contact","services"]);
   const [hoveredItem, setHoveredItem] = useState(null);
 
   return (
@@ -37,7 +38,7 @@ const Menu = ({ onClose }) => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            <a href={item === "Home" ? "/" : `/${item}`} onClick={onClose}>{item}</a> {/* Close menu on click */}
+            <Link to={item === "Home" ? "/" : `/${item}`} onClick={onClose}>{item}</Link> {/* Close menu on click */}
           </motion.li>
         ))}
       </ul>
