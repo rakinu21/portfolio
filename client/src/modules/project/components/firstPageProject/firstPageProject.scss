@@ -1,0 +1,110 @@
+@import '../../../../global.scss';
+
+.projecthomepage{
+   
+   height: 90dvh;
+   
+    display: flex;
+ 
+    @include mediumSc{
+      flex-direction: column;
+     
+    
+    }
+
+
+    .text{
+      flex: 1.6;
+      font-size: clamp(2rem, 5vw, 12rem);
+      padding: 40px;
+      position: relative;
+ 
+
+      @include mediumSc{
+      padding: 0;
+      height: 500px;
+       flex: 0.8;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+       gap: 30px;
+      }
+      
+        h1{
+         
+            color: aliceblue;
+        }
+        p{
+           font-size: 2vw;
+           color: orange;
+           @include mediumSc{
+              font-size: 1.4rem;
+              text-align: center;
+            }
+        }
+
+        .button{
+          
+            bottom: 0;
+            right: 0;
+            padding: 20px;
+           position: absolute;
+            font-size: 1.2rem;
+
+            @include mediumSc{
+              display: none;
+            }
+          
+        }
+
+    }
+
+
+    .container-image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mediumSc{
+          align-items: flex-start;
+        }
+       
+       
+        .images{
+            width: 100%;
+            height: 50%;
+            display: grid;
+      grid-template-columns: repeat(4, 1fr); // 4 columns
+      grid-template-rows: repeat(3, 1fr); // 3 rows
+      gap: 15px; // No extra spacing
+
+      @include mediumSc{
+        grid-template-columns: repeat(4, 1fr); // 4 columns
+        grid-template-rows: repeat(3, 1fr); // 3 rows
+      
+     
+   
+      }
+        }
+    
+    
+        .item {
+          height: 100%;
+          width: 100%;
+          margin: 0 auto;
+
+          @include mobile{
+            height: 100px;
+        
+          }
+
+        
+        
+         
+        }
+      }
+}
+
+

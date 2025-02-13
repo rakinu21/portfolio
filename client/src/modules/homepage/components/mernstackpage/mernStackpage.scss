@@ -1,0 +1,64 @@
+@import './../../../../global.scss' ;
+
+.carousel-about{
+
+    height: 500vh;
+
+    @include mobile{
+      
+      height: 390vh;
+    }
+    .contentContainer-about{
+
+      height: 100vh;
+      width: 100%;
+     
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+
+      @include mobile{
+        
+        height: 90vh;
+     
+      }
+     
+    
+     .projects-text, .resume{
+        position: absolute;
+        color: aliceblue;
+        font-size: 13vw;
+         width: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        overflow: hidden;
+       
+      @include mobile{
+        
+           font-size: 17vw;
+     
+      }
+      
+      }
+
+   
+      .images-about{
+        display: flex;
+      
+        gap: 40vw;
+
+        .item-about{
+          
+            height: 300px;
+            background-color: red;
+            padding: 30px;
+            width: 770px;
+        }
+    
+      }
+  
+    }
+  }

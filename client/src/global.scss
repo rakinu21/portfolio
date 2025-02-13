@@ -1,0 +1,15 @@
+$width: 868px;
+$Mdwidth: 1000px;
+
+
+@mixin mobile {
+    @media (max-width : #{$width}) {
+        @content
+    }
+}
+
+@mixin mediumSc {
+    @media (max-width : #{$Mdwidth}) {
+        @content
+    }
+}
